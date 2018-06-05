@@ -20,7 +20,7 @@ namespace GTAVRewardHook
         {
             serverThread = new Thread(new ThreadStart(Server.StartHost));
             serverThread.Start(); // 启动nancy服务器
-            Interval = 1; // 执行间隔，毫秒
+            Interval = 1; // Tick 执行间隔，毫秒
             Tick += MainTick; // 每隔 Interval 毫秒执行一次 MainTick，ManTick理解为回调函数
             KeyUp += OnKeyUp; // 绑定KeyUp事件， OnKeyUp也是回调函数
             KeyDown += OnKeyDown;

@@ -31,8 +31,6 @@ namespace GTAVRewardHook
         public int time_since_player_drove_on_pavement;
         public int time_since_player_hit_ped;
         public int time_since_player_hit_vehicle;
-        public float distance_to_way_point;
-        public bool use_tele_port;
         public List<VehiclePOJO> near_by_vehicles;
         public List<PedPOJO> near_by_peds;
         public List<EntityPOJO> near_by_props;
