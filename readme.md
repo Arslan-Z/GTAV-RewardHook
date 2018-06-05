@@ -78,3 +78,20 @@
 - 发送`GET`请求到`http://localhost:31730/data`,会得到表示游戏数据的 Json 字符串
 
 > 发送`GET`请求到`http://localhost:31730/data` 可能会得到错误信息，而不是 Json 字符串，这可能是因为此时 `MainTick` `函数正运行到某个位置，Detail` 类的属性不完整，故无法解析为 `Json` 字符串，此时继续发送请求即可。所以，建议使用 `Try-Catch` 语句捕获错误，如果出错就重发请求
+
+## 开发的建议:
+
+1.  如果希望在给定起点和终点的情况下进行驾驶策略的学习:
+    请修改 `Detail` 中的 `StartPosition` 和 `EndPosition` 属性；
+    另一种方案是点击地图，得到标记点(WayPoint)作为起点或者终点
+2.  如果只是希望在 GTAV 中无目的驾驶的话应该做好出错工作:
+    车辆会卡在某个位置，比如撞向车辆或者墙壁，绝不后退；或者落水，这时应该让车辆传送到附近的某个位置，并且随机设置车头的方向。
+3.  不要随意更换车辆，尽量使用同一辆车
+4.  尽量在正常区域行驶，不前往海边，山谷
+
+## 如果是深度开发
+
+1.  ScriptHookVDotNet 中的函数基本上都来自于 ScriptHook 建议参考 [ScriptHook SDK](http://www.dev-c.com/files/ScriptHookV_SDK_1.0.617.1a.zip) 中的 Native.h 或者 [nativedb](http://www.dev-c.com/nativedb/) 来查找合适的函数
+
+2.  GTA V 开发的交流网站：[GTA forums 的 Coding 板块](https://gtaforums.com/forum/317-coding/)
+3.  使用合适的方式 debug，建议使用 UI.Notify 将错误信息显示在游戏界面上
