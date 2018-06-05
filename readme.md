@@ -8,9 +8,12 @@
 - Alexander Blade 写的[C++ ScriptHook](http://www.dev-c.com/gtav/scripthookv/)
 - [ScriptHookVDotNet](https://github.com/crosire/scripthookvdotnet/releases)
 
+## [代码详解](GTAVRewardHook/readme.md)
 
-## 代码详解
-[详解](GTAVRewardHook/readme.md)
+## 使用本环境进行强化学习的例子
+
+[在 GTAV 环境 中使用强化学习算法(Actor-Critic-LSTM)](https://github.com/zhaoying9105/Reinforcement-learning-in-GTAV)，我的另一个项目
+
 ## ScriptHook 和 ScriptHookVDotNet 的安装过程
 
 `ScriptHook` 是 `GTA V` 的`C++ API`
@@ -67,7 +70,7 @@
 
 4.  在 GTAV 游戏界面按"insert"键，脚本即被加载运行
 
-    > 开发过程中不必关闭游戏，脚本跟新后按"insert"键即可
+    > 开发过程中不必关闭游戏，脚本更新后按"insert"键即可
 
 1.  测试链接、获取数据
 
